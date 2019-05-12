@@ -39,6 +39,10 @@ class Contact extends React.Component {
         this.setState({msg: e.target.value});
     }
 
+    submit = () => {
+        alert("Sent succesfully");
+    }
+
     render() {
         return (
             <div className="row about" style={{height:'100%'}}>
@@ -85,6 +89,7 @@ class Contact extends React.Component {
                     <button 
                         className="btn btn-primary my-2 " 
                         // onClick={this.componentWillMount}
+                        onClick={this.submit}
                     >Send
                     </button>
                 </form>
