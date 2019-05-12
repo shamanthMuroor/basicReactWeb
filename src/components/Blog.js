@@ -6,6 +6,13 @@ class Blog extends React.Component {
             <div className="row about">
             <div className="col-md-8 bg-light">
                  <h4>Blog</h4>
+                 <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores hic facilis, aspernatur enim id molestiae ut optio aliquam, mollitia assumenda odio unde nemo quasi quas natus! Voluptatibus temporibus eius deserunt.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores hic facilis, aspernatur enim id molestiae ut optio aliquam, mollitia assumenda odio unde nemo quasi quas natus! Voluptatibus temporibus eius deserunt.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores hic facilis, aspernatur enim id molestiae ut optio aliquam, mollitia assumenda odio unde nemo quasi quas natus! Voluptatibus temporibus eius deserunt.
+                </p>  
             </div>
             <div className="col-md-2"></div>
             <div className="col-md-2">

@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import firebase from 'firebase/app';
+// import firebase from 'firebase/app';
 
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -11,20 +11,20 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import ErrorPage from './components/ErrorPage';
 
-import 'firebase/firestore';
+// import 'firebase/firestore';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyALwOTU3F_26s1Q159S9RqzvR7IgTV7HVo",
-  authDomain: "fireapp-48dc5.firebaseapp.com",
-  databaseURL: "https://fireapp-48dc5.firebaseio.com",
-  projectId: "fireapp-48dc5",
-  storageBucket: "fireapp-48dc5.appspot.com",
-  messagingSenderId: "263031776215",
-  appId: "1:263031776215:web:e731de86119cafb4"
-};
-firebase.initializeApp(firebaseConfig);
+// const firebaseConfig = {
+//   apiKey: "AIzaSyALwOTU3F_26s1Q159S9RqzvR7IgTV7HVo",
+//   authDomain: "fireapp-48dc5.firebaseapp.com",
+//   databaseURL: "https://fireapp-48dc5.firebaseio.com",
+//   projectId: "fireapp-48dc5",
+//   storageBucket: "fireapp-48dc5.appspot.com",
+//   messagingSenderId: "263031776215",
+//   appId: "1:263031776215:web:e731de86119cafb4"
+// };
+// firebase.initializeApp(firebaseConfig);
 
-export let db=firebase.firestore();
+// export let db=firebase.firestore();
 
 class App extends React.Component {
   render() {

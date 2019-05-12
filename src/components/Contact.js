@@ -1,5 +1,5 @@
 import React from 'react';
-import {db} from '../App';
+// import {db} from '../App';
 
 class Contact extends React.Component {
     state = {
@@ -9,23 +9,19 @@ class Contact extends React.Component {
         msg: ''
     }
 
-    componentWillMount = () => {
-        // submit = () => {
-            //Send the details to database
-            db.collection("contactFromWeb").add({
-            name: this.state.name,
-            age: this.state.age,
-            email: this.state.email,
-            msg: this.state.msg
-            })
-            .then(() => {
-                alert("Data uploaded")
-                // window.location.reload();
-            })
-            .catch((err) => console.log(err))
-            console.log("sent successfully");
-        // }
-    }
+    // componentWillMount = () => {
+    //         db.collection("contactFromWeb").add({
+    //         name: this.state.name,
+    //         age: this.state.age,
+    //         email: this.state.email,
+    //         msg: this.state.msg
+    //         })
+    //         .then(() => {
+    //             alert("Data uploaded");
+    //         })
+    //         .catch((err) => console.log(err))
+    //         console.log("sent successfully");
+    // }
 
     saveName = (e) => {
         this.setState({name: e.target.value});
@@ -86,7 +82,11 @@ class Contact extends React.Component {
                             placeholder="Type your message here..."
                         />
                     </div>
-                    <button className="btn btn-primary my-2 " onClick={this.componentWillMount}>Send</button>
+                    <button 
+                        className="btn btn-primary my-2 " 
+                        // onClick={this.componentWillMount}
+                    >Send
+                    </button>
                 </form>
                 
             </div>
