@@ -4,9 +4,27 @@ import {db} from '../App';
 class Contact extends React.Component {
     state = {
         name: '',
-        age: '',
+        age: 0,
         email: '',
         msg: ''
+    }
+
+    componentWillMount = () => {
+        // submit = () => {
+            //Send the details to database
+            db.collection("contactFromWeb").add({
+            name: this.state.name,
+            age: this.state.age,
+            email: this.state.email,
+            msg: this.state.msg
+            })
+            .then(() => {
+                alert("Data uploaded")
+                // window.location.reload();
+            })
+            .catch((err) => console.log(err))
+            console.log("sent successfully");
+        // }
     }
 
     saveName = (e) => {
@@ -23,23 +41,6 @@ class Contact extends React.Component {
 
     saveMsg= (e) => {
         this.setState({msg: e.target.value});
-    }
-
-    submit = () => {
-        //Send the details to database
-        db.collection("contactFromWeb").add({
-           name: this.state.name,
-           age: this.state.age,
-           email: this.state.email,
-           msg: this.state.msg
-        })
-        .then(() => {
-            alert("Data uploaded")
-            // window.location.reload();
-        })
-        .catch((err) => console.log(err))
-
-    //     console.log("sent successfully")
     }
 
     render() {
@@ -85,7 +86,7 @@ class Contact extends React.Component {
                             placeholder="Type your message here..."
                         />
                     </div>
-                    <button className="btn btn-primary my-2 " onClick={this.submit}>Send</button>
+                    <button className="btn btn-primary my-2 " onClick={this.componentWillMount}>Send</button>
                 </form>
                 
             </div>
